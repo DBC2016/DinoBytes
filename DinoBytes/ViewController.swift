@@ -10,14 +10,19 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    func beaconInRange(notifcation: NSNotification) {
+        if let region = notifcation.userInfo?["region"] {
+            print("Found: \(region)")
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(beaconInRange), name: "inRange", object: nil)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
 
