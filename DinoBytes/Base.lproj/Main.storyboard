@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="3H6-f8-E11">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="GTp-4n-KxP">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--DinoBytes Adventure Guide-->
@@ -37,18 +38,15 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="DinoBytes Adventure Guide" id="aay-An-ctl"/>
-                    <connections>
-                        <segue destination="uaH-mW-rfC" kind="show" id="qaA-xM-jzp"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="998" y="-492"/>
+            <point key="canvasLocation" x="1321" y="231"/>
         </scene>
         <!--Dinosaur Profile-->
         <scene sceneID="tBy-Qe-VTl">
             <objects>
-                <viewController id="uaH-mW-rfC" sceneMemberID="viewController">
+                <viewController id="uaH-mW-rfC" customClass="ViewController" customModule="DinoBytes" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="q21-7p-nUj"/>
                         <viewControllerLayoutGuide type="bottom" id="vFK-Ec-TFE"/>
@@ -56,31 +54,132 @@
                     <view key="view" contentMode="scaleToFill" id="7hc-8U-1vQ">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="zHf-ur-czm">
+                                <rect key="frame" x="20" y="368" width="530" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Height" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Hi-L0-Gfb">
+                                <rect key="frame" x="20" y="158" width="84" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Weight" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HIc-b5-DuX">
+                                <rect key="frame" x="20" y="220" width="87" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="QXh-bT-KpN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Diet" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Llp-bc-MNw">
+                                <rect key="frame" x="20" y="283" width="64" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="Kpa-7U-fIw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="DinoName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uLp-g7-0pk">
+                                <rect key="frame" x="27" y="89" width="80" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vcT-jb-am6">
+                                <rect key="frame" x="20" y="174" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nYd-c5-Qjj">
+                                <rect key="frame" x="20" y="240" width="42" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="FuP-ih-TbO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N07-yq-2fa">
+                                <rect key="frame" x="20" y="301" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="dinoImage" translatesAutoresizingMaskIntoConstraints="NO" id="y2F-Zk-cDc">
+                                <rect key="frame" x="340" y="181" width="134" height="100"/>
+                                <color key="backgroundColor" red="0.96989634709999994" green="0.4863838298" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="Njt-xm-4a7"/>
+                                    <constraint firstAttribute="width" constant="134" id="OR9-Mn-wyp"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="100" id="bCk-6j-WZc"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="134" id="u3f-zJ-ZU9"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="nYd-c5-Qjj" firstAttribute="leading" secondItem="zHf-ur-czm" secondAttribute="leading" id="6YY-K6-74U"/>
+                            <constraint firstItem="uLp-g7-0pk" firstAttribute="top" secondItem="q21-7p-nUj" secondAttribute="bottom" constant="25" id="EHG-Yx-JNo"/>
+                            <constraint firstItem="vFK-Ec-TFE" firstAttribute="top" secondItem="y2F-Zk-cDc" secondAttribute="bottom" constant="319" id="THY-mv-iMt"/>
+                            <constraint firstItem="vcT-jb-am6" firstAttribute="top" secondItem="uLp-g7-0pk" secondAttribute="bottom" constant="64" id="U8y-dp-UD5"/>
+                            <constraint firstItem="y2F-Zk-cDc" firstAttribute="leading" secondItem="7hc-8U-1vQ" secondAttribute="leadingMargin" constant="396" id="aWW-4P-Cgg"/>
+                            <constraint firstItem="Llp-bc-MNw" firstAttribute="top" secondItem="nYd-c5-Qjj" secondAttribute="bottom" constant="22" id="bgD-kq-ewq"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="y2F-Zk-cDc" secondAttribute="trailing" constant="30" id="eU2-tJ-wvq"/>
+                            <constraint firstItem="HIc-b5-DuX" firstAttribute="top" secondItem="vcT-jb-am6" secondAttribute="bottom" constant="25" id="i4r-1E-jGJ"/>
+                            <constraint firstItem="N07-yq-2fa" firstAttribute="leading" secondItem="Llp-bc-MNw" secondAttribute="leading" id="iBO-h3-iHo"/>
+                            <constraint firstItem="y2F-Zk-cDc" firstAttribute="top" secondItem="q21-7p-nUj" secondAttribute="bottom" constant="117" id="isa-EC-7J2"/>
+                            <constraint firstItem="nYd-c5-Qjj" firstAttribute="leading" secondItem="Llp-bc-MNw" secondAttribute="leading" id="iur-yL-E6p"/>
+                            <constraint firstItem="vcT-jb-am6" firstAttribute="leading" secondItem="6Hi-L0-Gfb" secondAttribute="leading" id="kdN-qt-FWO"/>
+                            <constraint firstItem="zHf-ur-czm" firstAttribute="top" secondItem="y2F-Zk-cDc" secondAttribute="bottom" constant="87" id="kei-zm-gb2"/>
+                            <constraint firstItem="nYd-c5-Qjj" firstAttribute="leading" secondItem="HIc-b5-DuX" secondAttribute="leading" id="nhC-au-faj"/>
+                            <constraint firstItem="vFK-Ec-TFE" firstAttribute="top" secondItem="zHf-ur-czm" secondAttribute="bottom" constant="104" id="rIU-Zb-y0M"/>
+                            <constraint firstItem="zHf-ur-czm" firstAttribute="top" secondItem="N07-yq-2fa" secondAttribute="bottom" constant="46" id="rWj-6H-0IL"/>
+                            <constraint firstItem="y2F-Zk-cDc" firstAttribute="leading" secondItem="HIc-b5-DuX" secondAttribute="trailing" constant="309" id="uQZ-TR-Oya"/>
+                            <constraint firstItem="N07-yq-2fa" firstAttribute="top" secondItem="nYd-c5-Qjj" secondAttribute="bottom" constant="40" id="vWM-fg-Ifb"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Dinosaur Profile" id="XAc-1j-fEi"/>
+                    <connections>
+                        <outlet property="dinoDescripLabelTextView" destination="zHf-ur-czm" id="KsA-XK-tQ0"/>
+                        <outlet property="dinoDietLabel" destination="N07-yq-2fa" id="gUu-Hz-v77"/>
+                        <outlet property="dinoHeightLabel" destination="vcT-jb-am6" id="raM-gC-RoC"/>
+                        <outlet property="dinoImageView" destination="y2F-Zk-cDc" id="y9U-bi-nPM"/>
+                        <outlet property="dinoTitleLabel" destination="uLp-g7-0pk" id="vB7-SQ-Inj"/>
+                        <outlet property="dinoWeightLabel" destination="nYd-c5-Qjj" id="uwO-Y4-q9A"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3ee-du-wD4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1699" y="-492"/>
+            <point key="canvasLocation" x="1701" y="-492"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="9iC-Ph-9NQ">
+        <scene sceneID="A82-fi-jZu">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="3H6-f8-E11" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="GTp-4n-KxP" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ZeN-L9-0F0">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="eac-cG-uaP">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="GWT-j8-Krh"/>
+                        <segue destination="uaH-mW-rfC" kind="relationship" relationship="rootViewController" id="2GQ-W2-pIn"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Qus-pD-bNp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sKX-lz-ZFI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="223" y="-492"/>
+            <point key="canvasLocation" x="973" y="-492"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="dinoImage" width="16" height="16"/>
+    </resources>
 </document>

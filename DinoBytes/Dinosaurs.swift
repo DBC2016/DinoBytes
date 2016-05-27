@@ -17,7 +17,7 @@ class Dinosaurs: NSObject {
     var dinoWeight      :String = ""
     var dinoDiet        :String = ""
     var dinoImage       :String = ""
-    
+    var dinoBeacon      :String = ""
 
     
     

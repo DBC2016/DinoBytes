@@ -34,6 +34,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, ESTBeaconManagerDelegate 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         self.beaconManager.delegate = self
         backendless.initApp(APP_ID, secret:SECRET_KEY, version:VERSION_NUM)
+        checkForLocationAuthorization()
 
         return true
     }
@@ -50,7 +51,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, ESTBeaconManagerDelegate 
                     switch nearestBeacon.proximity {
                     case .Immediate:
                         print("Ranged Immediate \(region.identifier) beacon")
-                        NSNotificationCenter.defaultCenter().postNotificationName("inRange", object: nil, userInfo: ["region":[region.identifier]])
+                        NSNotificationCenter.defaultCenter().postNotificationName("inRange", object: nil, userInfo: ["region":region.identifier])
 //                    case .Near:
 //                        print("Ranged Near \(region.identifier) beacon")
 //                    case .Far:
@@ -58,7 +59,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, ESTBeaconManagerDelegate 
 //                    case .Unknown:
 //                        print("Ranged Unknown \(region.identifier) beacon")
                     default:
-                        print("don't care")
+                        return
+//                        print("don't care")
                     }
                     lastRegion = region
                     
@@ -109,13 +111,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate, ESTBeaconManagerDelegate 
             
             let liopBeaconMajor :CLBeaconMajorValue = 31640
             let liopBeaconMinor :CLBeaconMinorValue = 65404
-            let liopBeaconIdentifier = "LiopBeacon"
+            let liopBeaconIdentifier = "lipoBeacon"
             let liopBeaconRegion = CLBeaconRegion(proximityUUID: beaconUUID, major: liopBeaconMajor, minor: liopBeaconMinor, identifier: liopBeaconIdentifier)
             beaconManager.startRangingBeaconsInRegion(liopBeaconRegion)
             
             let stegoBeaconMajor :CLBeaconMajorValue = 34909
             let stegoBeaconMinor :CLBeaconMinorValue = 15660
-            let stegoBeaconIdentifier = "GreenBeacon"
+            let stegoBeaconIdentifier = "stegoBeacon"
             let stegoBeaconRegion = CLBeaconRegion(proximityUUID: beaconUUID, major: stegoBeaconMajor, minor: stegoBeaconMinor, identifier: stegoBeaconIdentifier)
             beaconManager.startRangingBeaconsInRegion(stegoBeaconRegion)
             

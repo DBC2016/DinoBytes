@@ -10,12 +10,9 @@
 		62D248D71CF4E70E001524FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D248D61CF4E70E001524FF /* AppDelegate.swift */; };
 		62D248D91CF4E70E001524FF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D248D81CF4E70E001524FF /* ViewController.swift */; };
 		62D248DC1CF4E70E001524FF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62D248DA1CF4E70E001524FF /* Main.storyboard */; };
-		62D248DE1CF4E70E001524FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 62D248DD1CF4E70E001524FF /* Assets.xcassets */; };
 		62D248E11CF4E70E001524FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62D248DF1CF4E70E001524FF /* LaunchScreen.storyboard */; };
 		62D248F41CF4FD8F001524FF /* Dinosaurs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D248F31CF4FD8F001524FF /* Dinosaurs.swift */; };
-		62D248F61CF50219001524FF /* RaptorDino.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D248F51CF50219001524FF /* RaptorDino.swift */; };
-		62D248F81CF577A1001524FF /* LiopDino.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D248F71CF577A1001524FF /* LiopDino.swift */; };
-		62D248FA1CF577B4001524FF /* StegoDino.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D248F91CF577B4001524FF /* StegoDino.swift */; };
+		62D249561CF78ABC001524FF /* Assets 15-46-59-095.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 62D249551CF78ABC001524FF /* Assets 15-46-59-095.xcassets */; };
 		D3B26C9B7CB0B71B55B06A67 /* Pods_DinoBytes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C40767A75F316E95A0C1A6C0 /* Pods_DinoBytes.framework */; };
 /* End PBXBuildFile section */
 
@@ -26,14 +23,11 @@
 		62D248D61CF4E70E001524FF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		62D248D81CF4E70E001524FF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		62D248DB1CF4E70E001524FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		62D248DD1CF4E70E001524FF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		62D248E01CF4E70E001524FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		62D248E21CF4E70E001524FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		62D248EC1CF4ED74001524FF /* DinoBytes-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DinoBytes-Bridging-Header.h"; sourceTree = "<group>"; };
 		62D248F31CF4FD8F001524FF /* Dinosaurs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dinosaurs.swift; sourceTree = "<group>"; };
-		62D248F51CF50219001524FF /* RaptorDino.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RaptorDino.swift; sourceTree = "<group>"; };
-		62D248F71CF577A1001524FF /* LiopDino.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LiopDino.swift; sourceTree = "<group>"; };
-		62D248F91CF577B4001524FF /* StegoDino.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StegoDino.swift; sourceTree = "<group>"; };
+		62D249551CF78ABC001524FF /* Assets 15-46-59-095.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Assets 15-46-59-095.xcassets"; sourceTree = "<group>"; };
 		C40767A75F316E95A0C1A6C0 /* Pods_DinoBytes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DinoBytes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -73,12 +67,9 @@
 				62D248D61CF4E70E001524FF /* AppDelegate.swift */,
 				62D248D81CF4E70E001524FF /* ViewController.swift */,
 				62D248DA1CF4E70E001524FF /* Main.storyboard */,
-				62D248DD1CF4E70E001524FF /* Assets.xcassets */,
 				62D248DF1CF4E70E001524FF /* LaunchScreen.storyboard */,
 				62D248E21CF4E70E001524FF /* Info.plist */,
-				62D248F51CF50219001524FF /* RaptorDino.swift */,
-				62D248F71CF577A1001524FF /* LiopDino.swift */,
-				62D248F91CF577B4001524FF /* StegoDino.swift */,
+				62D249551CF78ABC001524FF /* Assets 15-46-59-095.xcassets */,
 				62D248F01CF4FC77001524FF /* Model */,
 				62D248EC1CF4ED74001524FF /* DinoBytes-Bridging-Header.h */,
 			);
@@ -178,7 +169,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				62D248E11CF4E70E001524FF /* LaunchScreen.storyboard in Resources */,
-				62D248DE1CF4E70E001524FF /* Assets.xcassets in Resources */,
+				62D249561CF78ABC001524FF /* Assets 15-46-59-095.xcassets in Resources */,
 				62D248DC1CF4E70E001524FF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -238,10 +229,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				62D248F81CF577A1001524FF /* LiopDino.swift in Sources */,
 				62D248F41CF4FD8F001524FF /* Dinosaurs.swift in Sources */,
-				62D248FA1CF577B4001524FF /* StegoDino.swift in Sources */,
-				62D248F61CF50219001524FF /* RaptorDino.swift in Sources */,
 				62D248D91CF4E70E001524FF /* ViewController.swift in Sources */,
 				62D248D71CF4E70E001524FF /* AppDelegate.swift in Sources */,
 			);
