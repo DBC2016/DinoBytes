@@ -129,7 +129,7 @@ class ViewController: UIViewController {
             dinoHeightLabel.text = foundDino.dinoHeight
             dinoWeightLabel.text = foundDino.dinoWeight
             dinoDietLabel.text = foundDino.dinoDiet 
-//            dinoImageView.image = foundDino.dinoImage
+//            dinoImageView.image = 
             
             
             
