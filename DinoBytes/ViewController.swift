@@ -21,13 +21,29 @@ class ViewController: UIViewController {
     
 //    var filteredArray1 = ["Velociraptor","Lipoleurdon","Stegosaurus"]
     
-    
+    let documentsURL = NSURL(
+        fileURLWithPath: NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true).first!, isDirectory: true
+    )
+
     
     let backendless = Backendless.sharedInstance()
     var dinosArray = [Dinosaurs]()
     var selectedBeacon  :String!
     var selectedDinosaur :Dinosaurs?
     
+    
+    
+    private func getNewImageFilename() -> String {
+        return NSProcessInfo.processInfo().globallyUniqueString + ".png"
+    }
+    
+    
+    private func getDocumentPathForFile(filename: String) -> String {
+        let docPath = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as NSString
+        print("Path:\(docPath)")
+        return docPath.stringByAppendingPathComponent(filename)
+    }
+
     
     
     //Save Function
@@ -116,7 +132,7 @@ class ViewController: UIViewController {
     }
     
     
-    //MARK: - LIFE CYCLE METHODS
+    //MARK: - Life Cycle Methods
 
     func beaconInRange(notifcation: NSNotification) {
         if let region = notifcation.userInfo?["region"] {
@@ -128,7 +144,20 @@ class ViewController: UIViewController {
             dinoDescripLabelTextView.text = foundDino.dinoDescrip
             dinoHeightLabel.text = foundDino.dinoHeight
             dinoWeightLabel.text = foundDino.dinoWeight
-            dinoDietLabel.text = foundDino.dinoDiet 
+            dinoDietLabel.text = foundDino.dinoDiet
+            let image : UIImage = UIImage(named: "\(foundDino.dinoImage)")!
+            dinoImageView.image = image
+            
+            
+            
+//            dinoImage.images = foundDino.dinoImage
+            
+//            let currentFlavor = dataManager.flavorsArray[indexPath.row]
+//            cell.flavorNameLabel!.text = currentFlavor.flavorName
+//            cell.flavorImageView!.image = UIImage(named: dataManager.getDocumentPathForFile(currentFlavor.flavorImageFilename))
+            
+          
+            
 //            dinoImageView.image = 
             
             
